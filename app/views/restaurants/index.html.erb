@@ -1,0 +1,13 @@
+<h1>Welcome to restaurants.com</h1>
+  <p>Check out our list of RESTAURANTS
+  or <%=link_to "add a new restaurant", new_restaurant_path%></p>
+  <% @restaurants.each do |f| %>
+  <div class="restaurant">
+    <p>Name: <%= f.name %></p>
+    <p>Category: <%= f.category %></p>
+    <p>Address: <%= f.address %></p>
+    <p>Phone number: <%= f.phone_number %></p>
+  <%=link_to "More details", restaurant_path(f.id)%>
+  </div>
+<% end %>
+

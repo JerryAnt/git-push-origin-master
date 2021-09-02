@@ -1,0 +1,7 @@
+<h1>Welcome</h1>
+<p>to <%=  @restaurant.name %></p>
+<p>Address: <%=  @restaurant.address %> -
+Reservation:<%=  @restaurant.phone_number %></p>
+
+<%=link_to"Back to the list", restaurants_path %>
+<p>Already been there? <%=link_to"Share your thoughts", new_restaurant_review_path(@restaurant) %></p>
